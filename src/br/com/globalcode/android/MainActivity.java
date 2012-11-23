@@ -3,6 +3,7 @@ package br.com.globalcode.android;
 import android.os.Bundle;
 import android.app.Activity;
 import android.view.Menu;
+import android.widget.Gallery;
 
 public class MainActivity extends Activity {
 
@@ -10,6 +11,9 @@ public class MainActivity extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        Gallery gallery = (Gallery) findViewById(R.id.gallery1);
+        gallery.setAdapter(new ImageAdapter(this));
     }
 
     @Override
